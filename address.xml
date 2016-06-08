@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<address xmlns:xsi="http://www.w3.org/2001/XMLSchema" >
+  <name>Lily Joe</name>
+  <streetnumber>123</streetnumber>
+  <streetname>Main Street</streetname>
+  <secondaryaddress>SIDE 12</secondaryaddress>
+  <city>San Francisco</city>
+  <statecode>CA</statecode>
+  <zipcode>94111-1234</zipcode>
+</address>
+

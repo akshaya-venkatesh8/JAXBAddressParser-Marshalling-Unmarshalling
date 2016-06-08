@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="address">
+    <xs:complexType>
+      <xs:sequence>
+	<xs:element name="name">
+	  <xs:simpleType>
+  	    <xs:restriction base="xs:string">
+	      <xs:minLength value="1"/>
+	      <xs:maxLength value="20"/>
+	      
+	    </xs:restriction>
+	  </xs:simpleType>
+	</xs:element>
+        <xs:element name="streetnumber" type="xs:string"/>        
+	<xs:element name="streetname" type="xs:string"/>
+	<xs:element name="secondaryaddress" minOccurs="0" maxOccurs="1">
+	  <xs:simpleType>
+  	    <xs:restriction base="xs:string">
+	      <xs:pattern value="APT|BSMT|DEPT|FL|FRNT|HNGR|KEY|LBBY|LOT|LOWR|OFC|PH|PIER|REAR|RM|SIDE|SLIP|SPC|STOP|STE|TRLR|UNIT|UPPR|BLDG|[A-Z]* [0-9]*"/>      
+	      
+	    </xs:restriction>
+	  </xs:simpleType>
+	</xs:element>
+	  
+	<xs:element name="city">
+	  <xs:simpleType>
+	    <xs:restriction base="xs:string">
+	      
+	      <xs:whiteSpace value="preserve"/>
+	    </xs:restriction>
+	  </xs:simpleType>
+	</xs:element>
+	<xs:element name="statecode">
+	  <xs:simpleType>
+	    <xs:restriction base="xs:string">
+	      <xs:pattern value="[A-Z]{2}"/>
+	    </xs:restriction>
+	  </xs:simpleType>
+        </xs:element>
+	<xs:element name="zipcode">
+	  <xs:simpleType>
+	    <xs:restriction base="xs:string">
+	       <xs:pattern value="[0-9]{5}(-[0-9]{4})?"/>
+	    </xs:restriction>
+	  </xs:simpleType>
+	</xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
