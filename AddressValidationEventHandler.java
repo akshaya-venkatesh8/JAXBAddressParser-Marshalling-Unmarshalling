@@ -10,8 +10,10 @@ class AddressValidationEventHandler implements ValidationEventHandler {
   }
     @Override
     public boolean handleEvent(ValidationEvent event) {
-        System.out.println("ERROR : "+event.getMessage());
-        return true;
+      System.out.println("Message : "+event.getMessage());
+      System.out.println("Severity : "+event.getSeverity());
+      System.out.println("Warning/ErrorLocation :-\n@LineNumber - "+event.getLocator().getLineNumber()+"\n@ColumnNumber "+event.getLocator().getColumnNumber());
+      return false;
     }
     
 }
